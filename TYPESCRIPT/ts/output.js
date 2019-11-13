@@ -113,6 +113,33 @@ class AvengerHeredado extends Avenger2 {
 }
 let avh = new AvengerHeredado("Heredado");
 console.log(avh.nombre);
+//Herencia 2
+class AvengerHeredado2 extends Avenger2 {
+    constructor(nombre, edad) {
+        super(nombre);
+        this.edad = 0;
+        this.edad = edad;
+    }
+}
+let ah2 = new AvengerHeredado2("Heredado2", 44);
+console.log("Heredado2: " + ah2.edad + " nombre: " + ah2.nombre);
+//Namespace
+var Funciones;
+(function (Funciones) {
+    function f1() {
+        console.log("Yo la f1");
+    }
+    Funciones.f1 = f1;
+    function f2() {
+        console.log("Yo soy la f2");
+    }
+    Funciones.f2 = f2;
+})(Funciones || (Funciones = {}));
+Funciones.f1();
+Funciones.f2();
+$(function () {
+    console.log("ready");
+});
 /// <reference path="hello.ts"/>
 let mens = "Chau";
 console.log(mens);
